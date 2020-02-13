@@ -82,3 +82,15 @@ def number_coupons(number):
         count += 1
 
     return count
+
+#---------------------------Three number sum is zero-------------------
+
+
+def numbersum(listnum):
+    print(listnum)
+    for first in range(0, len(listnum)):
+        for second in range(first + 1, len(listnum)):
+            for third in range(second + 1, len(listnum)):
+                sum = listnum[first] + listnum[second] + listnum[third]
+                if sum == 0:
+                    print(f'{listnum[first]}+{listnum[second]}+{listnum[third]} = {sum}')
