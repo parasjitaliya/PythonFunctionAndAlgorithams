@@ -39,10 +39,8 @@ def primefactor(number):
 
 
 # ------------------------gambler logic ----------------------
-
-
+import random
 def gambler(stake, goal):
-    import random
     bets = 0
     win = 0
     # for i in range(time_ta_play)
@@ -54,6 +52,7 @@ def gambler(stake, goal):
         else:
             bets = bets + 1
             stake = stake - 1
+    #find percentage
     loss_percentage = ((bets - win) / bets) * 100
     win_percentage = (win / bets) * 100
     print(f"Total number of bets = {bets}")
@@ -65,8 +64,6 @@ def gambler(stake, goal):
 # ------------------------Coupon generations-----------------
 
 import random
-
-
 def number_coupons(number):
     distinct_coupons = []
     count = 0
@@ -83,7 +80,9 @@ def number_coupons(number):
 
     return count
 
+
 #---------------------------Three number sum is zero-------------------
+
 
 def numbersum(listnum):
     print(listnum)
@@ -94,7 +93,9 @@ def numbersum(listnum):
                 if sum == 0:
                     print(f'{listnum[first]}+{listnum[second]}+{listnum[third]} = {sum}')
 
+
 #-------------------------- distance from the point (x, y) to the origin (0, 0) --------------------
+
 
 import math
 
@@ -102,9 +103,13 @@ def distance_from_point(x,y):
     distance = math.sqrt(math.pow(x,2) + math.pow(y,2));
     return distance
 
+
 #------------------------- quadratic function logic -----------------------
+
+
 def quadratic(a, b, c):
-    d = b ** 2 - 4 * a * c  # discriminant
+    d = b ** 2 - 4 * a * c
+    #check condition
     if d < 0:
         print ("This equation has no real solution")
     elif d == 0:
@@ -114,3 +119,8 @@ def quadratic(a, b, c):
         x1 = (-b+math.sqrt(d))/(2*a)
         x2 = (-b-math.sqrt(d))/(2*a)
         print (f"This equation has two solutions:{x1},{x2}")
+
+#--------------------------------wind_chill function-------------------------
+def wind_chill(temp,wind_speed):
+    #calculation or return the value
+    return round(35.74+0.6215*temp+(0.4275*temp-35.75)*(wind_speed**0.16),4)
