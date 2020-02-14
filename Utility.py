@@ -85,7 +85,6 @@ def number_coupons(number):
 
 #---------------------------Three number sum is zero-------------------
 
-
 def numbersum(listnum):
     print(listnum)
     for first in range(0, len(listnum)):
@@ -94,3 +93,13 @@ def numbersum(listnum):
                 sum = listnum[first] + listnum[second] + listnum[third]
                 if sum == 0:
                     print(f'{listnum[first]}+{listnum[second]}+{listnum[third]} = {sum}')
+
+#-------------------------- distance from the point (x, y) to the origin (0, 0) --------------------
+
+
+import math
+
+
+def distance_from_point(x,y):
+    distance = math.sqrt(math.pow(x,2) + math.pow(y,2));
+    return distance
