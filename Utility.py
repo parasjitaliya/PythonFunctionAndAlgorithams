@@ -96,10 +96,21 @@ def numbersum(listnum):
 
 #-------------------------- distance from the point (x, y) to the origin (0, 0) --------------------
 
-
 import math
-
 
 def distance_from_point(x,y):
     distance = math.sqrt(math.pow(x,2) + math.pow(y,2));
     return distance
+
+#------------------------- quadratic function logic -----------------------
+def quadratic(a, b, c):
+    d = b ** 2 - 4 * a * c  # discriminant
+    if d < 0:
+        print ("This equation has no real solution")
+    elif d == 0:
+        x = (-b+math.sqrt(d))/2*a
+        print ("This equation has one solutions: "), x
+    else:
+        x1 = (-b+math.sqrt(d))/(2*a)
+        x2 = (-b-math.sqrt(d))/(2*a)
+        print (f"This equation has two solutions:{x1},{x2}")
